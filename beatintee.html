@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+     * {box-sizing: border-box;}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+body {
+  margin: 0;
+  font-family: 'Modak', cursive;
+  background-color:#e8e8e8;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e8e8e8;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e8e8e8;
+  color: black;
+}
+.nav-right{
+    float: right;
+}
+.responsive {
+    padding-top:0%;
+  width: 100%;
+  height: auto;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e8e8e8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  padding-left: 2px;
+  width: 100%;
+  padding: 10px;
+  
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.feit {
+
+    width: 100%;
+  max-width: 600px;
+  height: auto;
+
+}
+
+</style>
+</head>
+<body>
+    
+<div class="topnav">
+  <a class="active" href="#home">Beastin'</a>
+  <div class="nav-right">
+    <a href="#"><span style="cursor:pointer" onclick="openNav()">&#9776;</span></a>
+  
+  </div>
+
+  
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="store.html">Store</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+ 
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<div class="row">
+    <div class="column" style="background-color:#e8e8e8;">
+      <img class="feit" src="images/beastinTshirt.PNG" >
+      <h2>Alien Tee</h2>
+      <p>Info...</p>
+      <div>
+        <p style="
+          font-family: SQ Market;
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 500;
+        ">Alein tee</p>
+        <p style="
+          font-family: SQ Market;
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 500;
+        ">£60.00</p>
+        <a target="_blank" href="https://checkout.square.site/buy/DZTZK4SLNE2LPM6FSPCTC6EV" style="
+          display: inline-block;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 18px;
+          line-height: 48px;
+          height: 48px;
+          padding-left: 48px;
+          padding-right: 48px;
+          color: #ffffff;
+          min-width: 165px;
+          background-color: #000000;
+          border-radius: 4px;
+          text-align: center;
+          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+          text-decoration: none;
+        ">Buy now</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!--
+<div style="padding-left:16px">
+  <h2>Beastin' Inc</h2>
+  <p>Some content..</p>
+</div>-->
+    
+
+</body>
+</html>

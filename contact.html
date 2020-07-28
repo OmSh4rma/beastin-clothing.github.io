@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+     * {box-sizing: border-box;}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+body {
+  margin: 0;
+  font-family: 'Modak', cursive;
+  background-color:#e8e8e8;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e8e8e8;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e8e8e8;
+  color: black;
+}
+.nav-right{
+    float: right;
+}
+.responsive {
+    padding-top:0%;
+  width: 100%;
+  height: auto;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e8e8e8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 650px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.feit {
+  padding-left: 150px;
+width:650px;
+height:600px;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+    
+<div class="topnav">
+  <a class="active" href="index.html">Beastin'</a>
+  <div class="nav-right">
+    <a href="#"><span style="cursor:pointer" onclick="openNav()">&#9776;</span></a>
+  
+  </div>
+
+  
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="store.html">Store</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<div class="row">
+    <div class="column" style="background-color:#e8e8e8;">
+      
+<div class="card">
+    <img src="/w3images/team2.jpg" alt="" style="width:100%">
+    <h1 style="  font-family: 'Modak', cursive;">Omid Shahabi</h1>
+    <p class="title">Designer & Founder</p>
+    <p style="padding-top: 300px;">Harvard University</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>
+    </div>
+    <div class="column" style="background-color:#e8e8e8;">
+      
+<div class="card">
+    <img src="/w3images/team2.jpg" alt="" style="width:100%">
+    <h1 style="  font-family: 'Modak', cursive;">Om Sharma</h1>
+    <p class="title">CEO & Founder</p>
+    <p style="padding-top: 320px;">Harvard University</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>
+    </div>
+    <div class="column" style="background-color:#e8e8e8;">
+    
+<div class="card">
+    <img src="/w3images/team2.jpg" alt="" style="width:100%">
+    <h1 style="  font-family: 'Modak', cursive;">Taha Kabbara</h1>
+    <p class="title">Advisor & Founder</p>
+    <p style="padding-top: 300px;">Harvard University</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>
+    </div>
+  </div>
+
+
+<!--
+<div style="padding-left:16px">
+  <h2>Beastin' Inc</h2>
+  <p>Some content..</p>
+</div>-->
+    
+
+</body>
+</html>
