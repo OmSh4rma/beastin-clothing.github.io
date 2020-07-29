@@ -169,7 +169,7 @@ function closeNav() {
       <h2>Beastin' Ballon Tee</h2>
       <p>Delivery within 2/3 days</p>
       <p>If you wish to return, DPD service will collect it from your home, and you will recive your refund immediately...</p>
-      <div>
+      <div><!--
         <p style="
           font-family: SQ Market;
           font-size: 18px;
@@ -189,7 +189,7 @@ function closeNav() {
           line-height: 48px;
           height: 48px;
           padding-left: 48px;
-          padding-right: 48px;
+          padding-right: 633px;
           color: #ffffff;
           min-width: 165px;
           background-color: #000000;
@@ -198,7 +198,42 @@ function closeNav() {
           text-decoration: none;
           box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
         ">Buy now</a>
+        <tr><td><input type="hidden" name="on0" value="Sizes">Sizes</td></tr><tr><td><select name="os0">
+          <option value="Small">Small £40.00 GBP</option>
+          <option value="Medium">Medium £40.00 GBP</option>
+          <option value="Large">Large £40.00 GBP</option>
+        </select> </td></tr>-->
+        </table>
       </div>
+      
+      <div id="paypal-button-container" style="padding-top: 20px;"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'black',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '40'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+        
       </div>
     </div>
     
